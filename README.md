@@ -1,45 +1,76 @@
-# 📊 Stock Market Performance Analysis (Python)
+# AI Stock Market Prediction Dashboard
 
-## 👋 Project Overview
+An AI-powered stock market analysis and forecasting system built with Python.
 
-This project analyzes stock market performance using Python.
+This project started as a financial data analysis pipeline and evolved into an **interactive AI-powered stock prediction dashboard**.
 
-The goal is to show how financial data can be:
-
-- downloaded automatically
-- cleaned and transformed
-- analyzed using financial indicators
-- compared across multiple stocks
-- visualized with interactive charts
-- saved in a reproducible way
-
-The project is designed to demonstrate mid-level data analysis and engineering skills, not just plotting charts.
-
+It demonstrates how raw financial data can be transformed into **predictive insights and visual analytics**.
 
 ---
 
-## 🎯 What This Project Tries to Show
+# Key Features
+
+✔ Automated stock data ingestion  
+✔ Financial feature engineering  
+✔ LSTM-based stock price prediction  
+✔ 7-day price forecasting  
+✔ Interactive candlestick charts  
+✔ Multi-market support (US, UK, India, EU)  
+✔ Automatic currency detection  
+✔ GBX → GBP conversion for London stocks  
+✔ Interactive dashboard built with Streamlit  
+
+---
+
+# Dashboard Preview
+
+## Main Dashboard
+
+![Dashboard](screenshots/Apple_Stock_Price.png)
+
+---
+
+## Example: Apple (NASDAQ)
+
+![Apple Prediction](screenshots/Atlassian_Stock_Price.png)
+
+---
+
+## Example: Shell (London Stock Exchange)
+
+![Shell Prediction](screenshots/Shell_Stock_Price.png)
+
+---
+
+## Example: Reliance Industries (NSE India)
+
+![Reliance Prediction](screenshots/Reliance_Stock_Price.png)
+
+---
+
+# Project Goals
 
 This project demonstrates:
 
-✔ Building a clean analytics pipeline  
-✔ Working with real financial data  
-✔ Using modular Python architecture  
-✔ Creating reproducible experiment outputs  
-✔ Calculating risk & performance metrics  
+✔ Building a **clean data pipeline**  
+✔ Working with **real financial market data**  
+✔ Implementing **machine learning forecasting models**  
+✔ Creating **interactive financial dashboards**  
+✔ Handling **multi-market stock exchanges and currencies**
 
 In short:
 
-> Turning raw stock data into useful insights.
-
+> Turning raw stock data into **AI-driven financial insights**.
 
 ---
 
-## 📈 What Analysis Is Performed
+# What the System Does
 
-### 1️⃣ Data Download
+## Data Collection
 
-Stock data is downloaded automatically from Yahoo Finance using:
+Stock data is downloaded automatically using **Yahoo Finance**.
+
+Features retrieved:
 
 - Open price
 - High price
@@ -47,71 +78,79 @@ Stock data is downloaded automatically from Yahoo Finance using:
 - Close price
 - Volume
 
-Example stocks used:
+Example supported markets:
 
-| Company                 | Ticker | Sector              |
-| ----------------------- | ------ | ------------------- |
-| JPMorgan Chase & Co.    | JPM    | Banking / Finance   |
-| Exxon Mobil Corporation | XOM    | Energy              |
-| Johnson & Johnson       | JNJ    | Healthcare          |
-| Tesla, Inc.             | TSLA   | Automotive / Growth |
-
-
----
-
-### 2️⃣ Technical Indicators
-
-The project calculates:
-
-#### Moving Averages
-- Smooth price movement
-- Help identify trends
-
-#### Daily Return
-- Daily percentage change in price
-
-#### Volatility
-- Measures how unstable the stock price is
-- Indicates risk level
-
+| Market | Example Ticker |
+|------|------|
+| NASDAQ | AAPL |
+| London Stock Exchange | SHEL.L |
+| NSE India | RELIANCE.NS |
+| XETRA Germany | SAP.DE |
 
 ---
 
-### 3️⃣ Correlation Analysis
+# Machine Learning Model
 
-Shows how stocks move relative to each other.
+The prediction model uses:
 
-Example insight:
+**LSTM (Long Short-Term Memory) Neural Networks**
 
-- High correlation → stocks move together
-- Low correlation → diversification opportunity
+Why LSTM?
 
+- Designed for time-series data
+- Captures long-term patterns in stock price movements
+- Handles sequential dependencies in financial data
 
----
+The model predicts:
 
-### 4️⃣ Risk Metric (Sharpe Ratio)
-
-Sharpe Ratio measures:
-
-> Return earned per unit of risk taken.
-
-Higher Sharpe Ratio usually means better risk-adjusted performance.
-
+- Next trading day price
+- 7-day forecast
 
 ---
 
-### 5️⃣ Summary Report
+# Visualisation
 
-The project automatically identifies:
+The dashboard displays:
 
-- Best performing stock (Sharpe)
-- Worst performer
-- Most highly correlated stock pair
+- Historical **candlestick price chart**
+- **AI forecast line**
+- Predicted next-day price
+- Automatic currency conversion
 
-This simulates what an analyst would actually present.
+Example visualisation:
 
+Historical stock prices are displayed using candlestick charts, and the AI model generates a 7-day forecast extending from the most recent trading day.
+
+![Forecast Example](screenshots/Apple_Stock_Price.png)
 
 ---
 
-## 🧱 Project Structure
+# Multi-Currency Support
 
+The system automatically detects the stock exchange currency.
+
+Supported currencies:
+
+| Exchange | Currency |
+|------|------|
+| NASDAQ | USD ($) |
+| London Stock Exchange | GBP (£) |
+| NSE India | INR (₹) |
+| European markets | EUR (€) |
+
+London stocks quoted in **GBX (pence)** are automatically converted to **GBP**.
+
+Example conversion:
+3367 GBX → £33.67
+
+
+# Future Improvements
+
+Possible extensions include:
+
+Portfolio analysis
+Multi-stock comparison
+Backtesting strategies
+Model accuracy evaluation
+Cloud deployment
+Real-time market data integration
