@@ -148,9 +148,9 @@ Example conversion:
 
 Possible extensions include:
 
-Portfolio analysis
-Multi-stock comparison
-Backtesting strategies
-Model accuracy evaluation
-Cloud deployment
-Real-time market data integration
+- Portfolio analysis
+- Multi-stock comparison
+- Backtesting strategies
+- Model accuracy evaluation
+- Cloud deployment
+- Real-time market data integration
