@@ -16,3 +16,14 @@ if __name__ == "__main__":
     df = fetch_stock_data("AAPL")
 
     print(df.head())
+
+from feature_engineering import create_features
+
+
+if __name__ == "__main__":
+
+    df = fetch_stock_data("AAPL")
+
+    df = create_features(df)
+
+    print(df.head())
